@@ -53,6 +53,7 @@ products.forEach(product => {
         quantity += 1
         quantityDisplay.textContent = `${quantity}x`
         window.gameSounds.playPurchase()
+        window.shopping.itemPurchased()
 
         const itemName = product.querySelector('p').textContent
         shopMessage.textContent = `${itemName} purchased!`
