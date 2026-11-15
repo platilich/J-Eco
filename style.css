@@ -1,0 +1,58 @@
+:root {
+    --slide_bar: #ebc5a8;
+    --main: #d8d7d7;
+
+    --card: #f3f3f3;
+}
+
+
+body {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+
+    height: 100vh;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+.slide_bar, .main {
+    height: 100vh;
+}
+
+
+.slide_bar {
+    display: flex;
+    flex-direction: column;
+
+    padding: 5%;
+
+    background-color: var(--slide_bar);
+}
+
+
+.card {
+    background-color: var(--card);
+    border: 2px solid white;
+    border-radius: 16px;
+    padding: 2%;
+}
+
+
+.balance {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.shop_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+
+.main {
+    background-color: var(--main);
+}
