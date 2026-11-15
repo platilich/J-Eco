@@ -154,4 +154,33 @@ span {
 
 }
 
+body.dark-theme {
+    color: #eeeeee;
+}
+
+body.dark-theme .slide_bar {
+    background: #202020;
+}
+
+body.dark-theme .main {
+    background: #121212;
+}
+
+body.dark-theme .card {
+    background-color: #2b2b2b;
+    border-color: #444444;
+}
+
+body.dark-theme span {
+    color: #bdbdbd;
+}
+
+body.dark-theme .hr {
+    border-color: #444444;
+}
+
+body.dark-theme .scin {
+    filter: invert(1);
+    mix-blend-mode: screen;
+}
 
