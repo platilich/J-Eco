@@ -39,7 +39,28 @@ earth.addEventListener('click', function () {
 })
 
 
+// цикл каждый элементт и сохраняем его селектор
+products.forEach(product => {
+    const quantityDisplay = product.querySelector('.about span:last-child')
+    let quantity = 0
 
-products.addEventListener(click, function() {
-    
+
+    product.addEventListener('click', function () {
+        const price = Number(product.dataset.price)
+
+        if (balance < price) {
+            shopMessage.textContent = 'Not enough dinars. Click the Earth to earn more.'
+            return
+        }
+
+        
+        balance -= price
+        quantity += 1
+        quantityDisplay.textContent = `${quantity}x`
+
+        
+        const itemName = product.querySelector('p').textContent
+        shopMessage.textContent = `${itemName} purchased!`
+        updateStatistics()
+    })
 })
