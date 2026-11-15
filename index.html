@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
@@ -18,49 +19,51 @@
 
     <h3>Statistic</h3>
     <div class="card balance">
-        <p>Balance: </p>
-        <p>Your Eco-level: </p>
-        <p>Pollution: </p>
+        <p>Balance: <span id="balance">0 dinars</span></p>
+        <p>Earth clicks: <span id="click-count">0</span></p>
+        <p>Your Eco-level: <span id="eco-level">0</span></p>
+        <p>Pollution: <span id="pollution">0</span></p>
+        <p id="shop-message" role="status" aria-live="polite"></p>
     </div>
 
 
     <h3>Shop</h3>
     <div class="shop_grid">
-        <div class="card shopping">
+        <button class="card shopping product" type="button" data-price="1200">
             <img src="images/bag.jpeg" class="icon_card">
             <p>Reusable shopper</p>
             <span>1200 dinars</span>
-        </div>
+        </button>
 
-        <div class="card shopping">
+        <button class="card shopping product" type="button" data-price="180">
             <img src="images/cup.jpeg" class="icon_card">
             <p>Paper cup</p>
             <span>180 dinars</span>
-        </div>
+        </button>
 
-        <div class="card shopping">
+        <button class="card shopping product" type="button" data-price="120">
             <img src="images/pen.jpeg" class="icon_card">
             <p>Paper pen</p>
             <span>120 dinars</span>
-        </div>
+        </button>
 
-        <div class="card shopping">
+        <button class="card shopping product" type="button" data-price="1300">
             <img src="images/napkin.jpeg" class="icon_card">
             <p>Reusable napkin</p>
             <span>1300 dinars</span>
-        </div>
+        </button>
 
-        <div class="card shopping">
+        <button class="card shopping product" type="button" data-price="450">
             <img src="images/bottle.jpeg" class="icon_card">
             <p>Reusable water bottle</p>
             <span>450 dinars</span>
-        </div>
+        </button>
 
-        <div class="card shopping">
+        <button class="card shopping product" type="button" data-price="350">
             <img src="images/toothbrush.jpeg" class="icon_card">
             <p>Bamboo Toothbrush</p>
             <span>350 dinars</span>
-        </div>
+        </button>
     </div>
 
     <h3>Control menu</h3>
@@ -71,10 +74,10 @@
         </div>
 
 
-        <div class="card turn_off_soind shopping">
+        <button class="card turn_off_sound shopping" type="button" aria-pressed="false">
             <img src="images/zvuk_image.jpg" class="icon_card">
             <span>Turn off sound</span>
-        </div>
+        </button>
     </div>
 
     <div class="footer">
@@ -87,8 +90,10 @@
 
 
 <div class="main">
-    <img class="scin" src="earth/first.jpg">
+    <img class="scin earth" src="earth/first.jpg">
 </div>
 
+<script src="sounds.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

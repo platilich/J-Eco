@@ -31,24 +31,6 @@ body {
     padding: 6%;
 }
 
-.main {
-    display: flex;
-    flex-direction: column;
-
-    
-    justify-content: center;
-    align-items: center;
-
-    background: linear-gradient(135deg, var(--main) 0%, #dcefd7 100%);
-}
-
-.scin {
-    width: 50%;
-    mix-blend-mode: multiply;
-
-    cursor: pointer;
-}
-
 .slide_bar {
     display: flex;
     flex-direction: column;

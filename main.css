@@ -1,0 +1,33 @@
+.main {
+    display: flex;
+    flex-direction: column;
+
+
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, var(--main) 0%, #dcefd7 100%);
+}
+
+
+.scin {
+    width: 50%;
+    mix-blend-mode: multiply;
+
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.card {
+    color: inherit;
+    font: inherit;
+}
+
+.shopping {
+    cursor: pointer;
+}
+
+.product:hover,
+.turn_off_sound:hover {
+    transform: translateY(-2px);
+}
