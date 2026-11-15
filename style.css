@@ -1,6 +1,6 @@
 :root {
-    --slide_bar: #ebc5a8;
-    --main: #d8d7d7;
+    --slide_bar: #179149;
+    --main: #f5f9f2;
 
     --card: #f3f3f3;
 }
@@ -32,14 +32,17 @@ body {
 }
 
 .main {
-    background-color: var(--main);
+    background: linear-gradient(135deg, var(--main) 0%, #dcefd7 100%);
 }
 
 .slide_bar {
     display: flex;
     flex-direction: column;
 
-    background-color: var(--slide_bar);
+    background: linear-gradient(160deg, #e6d2ad 0%, #9b704a 100%);
+
+
+
 }
 
 
