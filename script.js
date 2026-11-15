@@ -37,3 +37,9 @@ earth.addEventListener('click', function () {
 
 
 })
+
+
+
+products.addEventListener(click, function() {
+    
+})
