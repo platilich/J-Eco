@@ -1,4 +1,4 @@
-const themeButton = document.querySelector('.turn_off_light')
+const themeButton = document.querySelector('.appearance')
 
 // кнопка включает тёмную тему и возвращает обычную
 themeButton.addEventListener('click', function () {
