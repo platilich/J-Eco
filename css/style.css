@@ -71,6 +71,16 @@ body {
 }
 
 
+
+.balance_board {
+    background-color: var(--card);
+    padding: 3%;
+
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+
 .new_card {
     display: flex;
 
@@ -78,7 +88,6 @@ body {
     align-content: center;
     align-items: center;
 
-    width: 100%;
 
     background-color: var(--card);
     border: 1px solid var(--border);
@@ -116,63 +125,11 @@ body {
 
 
 
-.card:hover,
-.turn_off_sound:hover {
-    border: 1px soldi var(--accent);
-}
 
-
-
-/* all cards */
-
-.card {
-    background-color: var(--card);
-    border: 2px solid white;
-    border-radius: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-
-}
-
-
-
-/* */
-
-.h3 {
-    margin-top: 50px;
-}
-
-.balance {
-    display: flex;
-    flex-direction: column;
-    padding: 3%;
-}
-
-
-
-/* shop */
-.icon_card {
-    width: 60%;
-    mix-blend-mode: multiply;
-}
-
-.shop_grid {
+.grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
-}
-
-.shopping {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-    gap: 0;
-
 }
 
 
@@ -189,7 +146,7 @@ span {
 
 
 
-/* FOOOOOOOOOTER */
+/* FOOTER */
 
 
 .footer {
@@ -231,6 +188,8 @@ span {
 
 }
 
+
+
 body.dark-theme {
     color: #eeeeee;
 }
@@ -260,4 +219,3 @@ body.dark-theme .scin {
     filter: invert(1);
     mix-blend-mode: screen;
 }
-
