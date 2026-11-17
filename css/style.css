@@ -198,14 +198,22 @@ body.dark-theme .slide_bar {
     background: #202020;
 }
 
+
+body.dark-theme .balance_board {
+    background: #2b2b2b;
+    border-color: #444444;
+
+}
+
 body.dark-theme .main {
     background: #121212;
 }
 
-body.dark-theme .card {
+body.dark-theme .new_card {
     background-color: #2b2b2b;
     border-color: #444444;
 }
+
 
 body.dark-theme span {
     color: #bdbdbd;
@@ -218,4 +226,9 @@ body.dark-theme .hr {
 body.dark-theme .scin {
     filter: invert(1);
     mix-blend-mode: screen;
+}
+
+
+body.dark-theme svg {
+    filter: invert(1);
 }

@@ -1,12 +1,21 @@
 const themeButton = document.querySelector('.appearance')
 
-// кнопка включает тёмную тему и возвращает обычную
+// подгружаем тему при открытии
+const savedTheme = localStorage.getItem('theme')
+if (savedTheme === 'dark') {
+    document.body.classList.add('dark-theme')
+    themeButton.querySelector('p').textContent = 'Light Mode'
+}
+
 themeButton.addEventListener('click', function () {
     document.body.classList.toggle('dark-theme')
 
     const darkThemeIsOn = document.body.classList.contains('dark-theme')
+
     themeButton.setAttribute('aria-pressed', String(darkThemeIsOn))
-    themeButton.querySelector('span').textContent = darkThemeIsOn
+    themeButton.querySelector('p').textContent = darkThemeIsOn
         ? 'Light Mode'
         : 'Dark Mode'
+
+    localStorage.setItem('theme', darkThemeIsOn ? 'dark' : 'light')
 })
