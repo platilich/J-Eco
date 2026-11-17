@@ -1,7 +1,7 @@
 const earth = document.querySelector('.earth')
 const balanceDisplay = document.querySelector('#balance')
 const shopMessage = document.querySelector('#shop-message')
-const products = document.querySelectorAll('.new_card')
+const products = document.querySelectorAll('.new_card[data-price]')
 
 let balance = 0
 let restoreTimer
@@ -26,9 +26,14 @@ earth.addEventListener('click', function () {
 
 products.forEach(product => {
     const quantityDisplay = product.querySelector('span')
-    let quantity = 0
+    let purchased = false
 
     product.addEventListener('click', function () {
+        if (purchased) {
+            shopMessage.textContent = 'Already purchased.'
+            return
+        }
+
         const price = Number(product.dataset.price)
 
         if (balance < price) {
@@ -37,8 +42,11 @@ products.forEach(product => {
         }
 
         balance -= price
-        quantity += 1
-        quantityDisplay.textContent = `${quantity}x`
+        purchased = true
+        quantityDisplay.textContent = 'x'
+        product.style.opacity = '0.5'
+        product.style.cursor = 'default'
+
         window.gameSounds.playPurchase()
         window.shopping.itemPurchased()
 
