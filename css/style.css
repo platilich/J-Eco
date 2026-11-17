@@ -7,6 +7,9 @@
     --text: #202124;            /* основной текст */
     --muted: #5f6368;           /* вторичный текст */
     --accent: #1a73e8;          /* синий акцент */
+
+
+    --radius: 26px; /* radius */
 }
 
 
@@ -77,7 +80,7 @@ body {
     padding: 3%;
 
     border: 1px solid var(--border);
-    border-radius: 16px;
+    border-radius: var(--radius);
 }
 
 
@@ -91,7 +94,7 @@ body {
 
     background-color: var(--card);
     border: 1px solid var(--border);
-    border-radius: 16px;
+    border-radius: var(--radius);
 
 
     padding: 2%;
@@ -239,21 +242,17 @@ body.dark-theme svg {
 .overlay {
     position: fixed;
     inset: 0;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     z-index: 999;
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(5px);
 }
 
-.overlay--win  { background: rgba(0, 20, 10, 0.72); }
-.overlay--lose { background: rgba(20, 0, 0, 0.72); }
 
 .overlay__card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 24px;
-    padding: 48px 56px;
     max-width: 420px;
     width: 90%;
     display: flex;
@@ -262,46 +261,23 @@ body.dark-theme svg {
     color: var(--text);
 }
 
-.overlay__label {
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin: 0;
-}
-
-.overlay--win  .overlay__label { color: #1e8a4a; }
-.overlay--lose .overlay__label { color: #c0392b; }
-
-.overlay__title {
-    font-size: 2rem;
-    font-weight: 700;
-    margin: 0;
-    line-height: 1.1;
-}
-
-.overlay__sub {
-    font-size: 0.95rem;
-    color: var(--muted);
-    margin: 0;
-}
 
 .overlay__btn {
-    margin-top: 12px;
-    padding: 12px 0;
-    width: 100%;
-    font-size: 0.95rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    border-radius: 12px;
+    display: flex;
+    text-align: center;
+    background-color: var(--card);
     border: 1px solid var(--border);
-    background: var(--card);
-    color: var(--text);
-    cursor: pointer;
-    transition: 0.2s;
-}
+    border-radius: var(--radius);
 
-.overlay__btn:hover {
-    background: var(--border_accent);
+
+    padding: 2%;
+    cursor: pointer;
+    width: 150px;
+    transition: 0.2s;
+
+
+    &:hover {
+        background-color: var(--border_accent);
+        border: 1px solid var(--border_accent);
+    }
 }

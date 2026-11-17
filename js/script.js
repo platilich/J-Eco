@@ -7,7 +7,7 @@ let balance = 0
 let restoreTimer
 
 function updateStatistics() {
-    balanceDisplay.textContent = `${balance} dinars`
+    balanceDisplay.textContent = `${balance}`
 }
 
 earth.addEventListener('click', function () {
@@ -37,7 +37,7 @@ products.forEach(product => {
         const price = Number(product.dataset.price)
 
         if (balance < price) {
-            shopMessage.textContent = 'Not enough dinars. Click the Earth to earn more.'
+            shopMessage.textContent = 'Not enough eco-points. Click the Earth to earn more.'
             return
         }
 
