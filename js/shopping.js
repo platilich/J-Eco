@@ -21,9 +21,13 @@ function updateEcoLevel() {
     pollutionDisplay.textContent = String(100 - (ecoLevel - 1) * 25)
 }
 
+
 window.shopping = {
     itemPurchased: function () {
         purchasedItems += 1
         updateEcoLevel()
+    },
+    allPurchased: function () {
+        return purchasedItems >= 5
     },
 }
