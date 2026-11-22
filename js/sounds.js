@@ -1,5 +1,3 @@
-const clickSound = new Audio('../assets/sounds/sound_clicked.mp3')
-const purchaseSound = new Audio('../assets/sounds/paid.mp3')
 const soundToggle = document.querySelector('.soundToggle')
 let text = document.querySelector('.soundToggleText')
 
@@ -21,9 +19,9 @@ function applySound() {
 
 applySound()
 
-function playSound(sound) {
+function playSound(src) {
     if (!soundIsOn) return
-    sound.currentTime = 0
+    const sound = new Audio(src)
     sound.play().catch(error => {
         console.error('не удалось включить звук:', error)
     })
@@ -37,9 +35,9 @@ soundToggle.addEventListener('click', function () {
 
 window.gameSounds = {
     playClick: function () {
-        playSound(clickSound)
+        playSound('assets/sounds/sound_clicked.mp3')
     },
     playPurchase: function () {
-        playSound(purchaseSound)
+        playSound('assets/sounds/paid.mp3')
     },
 }
