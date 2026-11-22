@@ -438,6 +438,19 @@ body.dark-theme svg {
 body.dark-theme .about-card {
     background: #2b2b2b;
     border-color: #444444;
+    color: #eeeeee;
+}
+
+body.dark-theme .about-card h2 {
+    color: #eeeeee;
+}
+
+body.dark-theme .about-card p {
+    color: #bdbdbd;
+}
+
+body.dark-theme .about-card ul {
+    color: #eeeeee;
 }
 
 body.dark-theme .about-close {
@@ -447,102 +460,130 @@ body.dark-theme .about-close {
 }
 
 
-/* под телефоны*/
+/* Mobile responsive */
 @media (max-width: 900px) {
     body {
         grid-template-columns: 1fr;
         grid-template-rows: auto 1fr;
     }
 
-
     .slide_bar {
         height: auto;
-        max-height: 50vh;
-        padding: 4%;
+        max-height: none;
+        padding: 16px;
         order: 2;
     }
 
-
-
     .main {
         order: 1;
-        min-height: 50vh;
-        padding: 20px 0;
+        min-height: 55vh;
+        padding: 30px 0 20px 0;
     }
-
-
 
     .scin {
-        width: 40%;
-        max-width: 200px;
+        width: 75%;
+        max-width: 320px;
     }
-
 
     .balance_board {
-        padding: 2%;
+        padding: 12px;
     }
-
 
     .new_card {
-        padding: 1.5%;
+        padding: 12px;
     }
-
 
     .overlay__card {
         max-width: 90%;
         padding: 20px;
     }
 
-
     .overlay__btns {
         flex-direction: column;
     }
-
 
     .overlay__btn {
         width: 100%;
     }
 
-
     .about-card {
         padding: 20px;
         max-height: 85vh;
     }
-
 }
-
-
 
 @media (max-width: 500px) {
     .slide_bar {
-        padding: 3%;
+        padding: 12px;
     }
 
+    .main {
+        min-height: 50vh;
+        padding: 20px 0 10px 0;
+    }
 
     .scin {
-        width: 35%;
-        max-width: 150px;
+        width: 80%;
+        max-width: 280px;
     }
-
 
     h1 {
-        font-size: 24px;
+        font-size: 22px;
     }
-
 
     h3 {
-        font-size: 16px;
+        font-size: 15px;
     }
 
+    .new_card {
+        padding: 10px;
+    }
 
     .new_card_icon svg {
-        width: 20px;
-        height: 20px;
+        width: 22px;
+        height: 22px;
     }
 
-
     .new_card_icon p {
+        font-size: 14px;
+    }
+
+    .balance_board p {
         font-size: 13px;
     }
 
+    .pollution-bar-container {
+        height: 10px;
+    }
+
+    .overlay__card {
+        padding: 16px;
+        gap: 8px;
+    }
+
+    .overlay__title {
+        font-size: 22px;
+    }
+
+    .about-card {
+        padding: 16px;
+        gap: 10px;
+    }
+
+    .about-card h2 {
+        font-size: 18px;
+    }
+
+    .about-card p {
+        font-size: 13px;
+    }
+
+    .about-card ul {
+        font-size: 13px;
+    }
+
+    .about-close {
+        padding: 8px 20px;
+        font-size: 13px;
+    }
 }
